@@ -1,0 +1,376 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection{
+	background-color: #F99E2B;
+	color: #2A2A2A;
+}
+
+/*Solo el banner*/
+.banner{
+	width: 1600px;
+	height: 254px;
+	border-radius: 5px;
+	margin-top: 10px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+/*Recuadro ubicado donde esta el banner*/
+.verde{
+	background: transparent; 
+	width: 1600px;
+	height: 250px;
+	margin-left: 8.55em;
+	margin-top: 0.75em;
+}
+
+/*Fondo de pantalla (primario)*/
+#fondo{
+	background-color: #DDDDDD;
+	background: url(imagenes/Fondo_1910x1875.jpg) 
+}
+
+/*Menu superior*/
+
+.navegacion{
+	width: 1600px;
+	margin: 16.5px auto;
+	background: #FFFFFF;
+	height: 50px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    background-image: url(imagenes/Menu2medievalA.jpg);
+}
+
+.navegacion ul{
+	list-style-type: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	font-weight: bold;
+	display: block;
+	padding: 15px 25px;
+	color: #353535;
+	font-size: 20px;
+	font-family: "Open sans";
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.menu li a:hover{
+	color: #ADFFFE;
+	transition: all .3s;
+}
+
+label{
+	font-size: 18px;
+}
+
+.botonBuscar{
+	font-weight: bold;
+	background: none;
+	color: #FFFFFF;
+	font-size: 15px; 
+	width: 80px;
+	height: 30px;
+	border: 1px solid #CDCDCD;
+	border-radius: 6px;
+}
+
+/*Sub menu - En el menu*/
+
+.submenu{
+	z-index: 1;
+	margin-top: -3px;
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+/*Redes - barra lateral*/
+	.container-bar{
+		z-index: 1;
+		width: 100%;
+		max-width: 60px;
+		position: fixed;
+		left: 0;
+		top: 25%;
+	}
+	.container-bar a{
+		z-index: 1;
+		height: 51px;
+		display: block;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 17px;
+		position: relative;
+		transition: all 500ms ease;
+		color: #fff;
+		text-align: center;
+	}
+	.container-bar a:hover{
+		background: #1c1c1c;
+	}
+	.container-bar .icon-facebook{
+		background: #3369E8;
+		border-radius: 0px 5px 0px 0px;
+	}
+	.container-bar .icon-youtube{
+		background: #e52a23;
+	}
+	.container-bar .icon-twitter{
+		background: #00acee;
+	}
+	.container-bar .icon-correo{
+		background: #747473;
+	}
+	.container-bar .icon-pinterest{
+		background: #c8232c;
+	}
+	.container-bar .icon-reddit{
+		background: #FF4500;
+		border-radius: 0px 0px 5px 0px;
+	}
+	.container-bar .title{
+		position: fixed;
+		background: #1c1c1c;
+		padding: 6px;
+		border-radius: 3px;
+		font-size: 15px;
+		margin-top: -4px;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+	.container-bar a:hover .title{
+		opacity: 1;
+		visibility: visible;
+		margin-left: 30px;
+	}
+	.container-bar .title:after{
+		z-index: 1;
+		position: absolute;
+		content: '';
+		border-left: 6px solid transparent;
+		border-right: 5px solid #1c1c1c;
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+		right: 100%;
+		top: 8px;
+	}
+	#btn-social{
+		display: none;
+	}
+	.icon-play-1{
+		z-index: 1;
+		cursor: pointer;
+		transition: all 0.4s;
+		font-size: 17px;
+		margin-bottom: 2px;
+		margin-left: 4px;
+		display: inline-block;
+		transform: rotate(180deg);
+		color: #49b0e6;
+		font-weight: bold;
+	}
+	#btn-social:checked ~.icon-play-1{
+		transform: rotate(0deg);
+	}
+	.icon-social{
+		transition: all 0.4s;
+		transform: translateX(0%);
+		box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+	}
+	#btn-social:checked ~ .icon-social{
+		transform: translateX(-100%);
+	}
+
+/*Recuadro ubicado donde esta el contenido*/
+.blue{
+	margin-top: 5px;
+	margin-left: 8.55em;
+	background: #ADFFFE;
+	background: transparent;
+	width: 1600px;
+	height: 900px;
+	border-radius: 5px;
+}
+
+/*Venatan izquierda*/
+.uno{
+	margin-top: -8px;
+	background: green;
+	background: url(imagenes/pergamino.jpg); 
+	width: 780px;
+	height: 900px;
+	padding: 1em;
+	margin-right: 10px;
+	margin-left: 11px
+}
+
+/*Ventana derecha*/
+.dos{
+	margin-top: -8px;
+	background: crimson;
+	background: url(imagenes/pergamino.jpg);
+	width: 780px;
+	height: 900px;
+	position: absolute;
+	left: 800px;
+	padding: 1em;
+	margin-right: 11px; 
+	margin-left: 10px;
+}
+
+/*Vídeo bardo*/
+iframe{
+	padding-top: 45px;
+	margin-top: -1px; 
+}
+
+/*Títulos*/
+
+@font-face{
+    font-family: OldLondonAlternate;
+    src: url('OldLondonAlternate.ttf');
+}
+
+.titulo{
+	font-family: OldLondonAlternate;
+	margin-top: 15px;
+    color: black;
+    font-size: 50px;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px black;
+}
+
+/*Texto - lorem ipsum - */
+p{
+	margin-top: -10px;
+	color: black;
+	font-size: 19.5px;
+	font-family: OldLondonAlternate;
+}
+
+/*botones de colores*/
+.capa a{
+	padding: 12px;
+	margin-left: 31.5px;
+}
+
+.capa a:hover{
+	background: #1c1c1c;
+	opacity: 5;
+	border: -5px;
+	transition: all .3s;
+}
+
+/*Ventana con pestañas*/
+
+.mytabs { 
+	margin-top: 35px auto;
+	position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 3px auto;
+    padding: 25px;
+}
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 24.31px;
+    background: url(imagenes/eef3d5e49e9bdeaa98308677f7a5400cf.jpg);
+    font-weight: bold;
+    margin-bottom: -5px; 
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.mytabs .tab {
+	border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+    width: 100%;
+    padding: 20px;
+    background: url(imagenes/Papel_clases.jpg);
+    order: 1;
+    display: none;
+}
+.mytabs .tab h2 {
+	padding-top: 5px;
+    font-size: 3em;
+    font-family: OldLondonAlternate;
+    padding-bottom: 2px; 
+    padding-right: -150px;
+}
+
+.mytabs .tab p {
+	padding: 15px;
+    font-size: 21px;
+    font-family: OldLondonAlternate; 
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: url(imagenes/fondo-blanco-de-la-textura-del-papel-acuarela-122041181.jpg);
+}
+
+/*Alinear texto*/
+.text_align{
+	display: inline-block;
+  	vertical-align: top;
+  	float: left;
+}
+
+/*Pie de página*/
+
+.foot{
+	color: white;
+	background: transparent;
+	background: url(imagenes/PieDePagina.jpg);
+	height: 38px;
+	line-height: 12px;
+	padding: 12px;
+	width: 1602px;
+	position: center;
+	margin-left: 8%;
+	float: bottom;
+}
